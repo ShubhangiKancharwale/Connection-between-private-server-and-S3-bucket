@@ -1,0 +1,19 @@
+Steps 
+-	Deploy one suse linux server in private subnet and create one s3 bucket when you try to deploy private IP server deploy another windows server In public IP.
+-	So, deploy windows server in public IP.
+-	Copy private IP of windows paste it into linux security group with port 22.
+-	For s3 bucket access create one IAM user and generate access key and secrete access key .
+-	After that create IAM role with s3 full access and modify this role in linux instance.
+-	Then after that create endpoints in vpc with s3 gateway service and create route table with private subnet association save that table 
+- go to the route table again --> in manage route select that private route we created.
+-	Then after all this configuration try to configure s3 bucket by running "aws configure" cmd.
+-	It will ask you access and secrete access key enter that keys, region(in which region your network is persent) and format(json) 
+-	After that this will give you access to s3 bucket run "aws s3 ls" cmd this cmd show you the list of buckets present in s3.
+- Now you have an access to your S3 bucket 
+- you can make directories, share files, access files of s3 buckets from the terminal.
+- For ex lets suppose you have one folder in s3 bucket named as 'Data' 
+- simply make directory in server add some files.
+- come out from directory/change directory.
+- go back to s3 bucket select folder their is bucket URI copy that URI 
+- come back to terminal run          aws s3 sync directory path(ex /temp/data1)  s3 bucket URI
+- using this cmd the files present in directory are shared into s3 bucket.
