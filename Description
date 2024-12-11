@@ -1,0 +1,13 @@
+S3 Bucket :
+            Amazon S3 is simple storage service one of the main building block of aws. 
+            Many websites use S3 as a backbone. 
+            S3 is object storage with a simple web service interface to store and retrieve any amount of data from anywhere on the web. 
+            It is a global service but buckets are created in specific region.
+
+IAM role :
+          An IAM role is an IAM identity that you can create in your account that has specific permission.
+          IAM role is similar to an IAM user, in that it is an AwS identity with permission policies that determine what the identity can & cannot do in AWS.
+
+VPC Endpoints :
+                VPC Endpoints allow you to connect aws resources privately.
+
